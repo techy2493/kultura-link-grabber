@@ -29,7 +29,7 @@ function build_firefox() {
             },
             noSource: true
         }))
-    .pipe(src(FF_SRC_PATH + "/manifest.json"))
+    .pipe(src(FF_SRC_PATH + "/*.json"))
     .pipe(dest(path.join(OUTPUT_PATH, "firefox")));
 }
 
@@ -45,7 +45,7 @@ function build_chrome() {
             },
             noSource: true
         }))
-    .pipe(src(CHROME_SRC_PATH + "/manifest.json"))
+    .pipe(src(CHROME_SRC_PATH + "/*.json"))
     .pipe(dest(path.join(OUTPUT_PATH, "chrome")));
 }
 
@@ -56,12 +56,14 @@ function addFileExpression(path) {
 
 function archive_firefox() {
     return src(addFileExpression(path.join(OUTPUT_PATH, "firefox")))
+    .pipe(src(FF_SRC_PATH + "/*.json"))
     .pipe(zip("firefox.zip"))
     .pipe(dest(OUTPUT_PATH));
 }
 
 function archive_chrome() {
     return src(addFileExpression(path.join(OUTPUT_PATH, "chrome")))
+        .pipe(src(CHROME_SRC_PATH + "/*.json"))
         .pipe(zip("chrome.zip"))
         .pipe(dest(OUTPUT_PATH));
 }
