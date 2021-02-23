@@ -1,0 +1,1 @@
+menu = browser.menus;

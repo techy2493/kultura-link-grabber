@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "OWW Kultura Copy Game Link",
+    "version": "1.0",
+  
+    "description": "Presents a right-click menu option to open a link in a new muted tab.",
+  
+    "background": {
+      "scripts": ["background.js", "getLink.js", "act.js", "shim.js"]
+    },
+  
+    "permissions": ["menus", "clipboardWrite"]
+  }
+  
