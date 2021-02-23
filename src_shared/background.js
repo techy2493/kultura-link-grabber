@@ -13,8 +13,9 @@ menu.onClicked.addListener(async function (info, page) {
         if (info.srcUrl) {
             // Regex for src url
             let link = getLink(info.srcUrl);
-            console.log(page)
-            act(link);
+            if (link) {
+                act(link);
+            }
         }
     }
 });
