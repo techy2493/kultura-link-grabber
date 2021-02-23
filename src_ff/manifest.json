@@ -6,7 +6,7 @@
     "description": "Presents a right-click menu option to open a link in a new muted tab.",
   
     "background": {
-      "scripts": ["background.js", "getLink.js", "act.js", "shim.js"]
+      "scripts": ["background.js"]
     },
   
     "permissions": ["menus", "clipboardWrite"]
