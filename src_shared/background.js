@@ -5,7 +5,7 @@ menu.create({
     id: "kultura-game-link",
     title: "Copy Game Link",
     contexts: ["image"],
-    documentUrlPatterns: ["*://kultura.oww.io/*"]
+    documentUrlPatterns: ["*://kultura.oww.io/*","*://www.kultura.oww.io/*"]
 })
 
 menu.onClicked.addListener(async function (info, page) {
@@ -16,6 +16,7 @@ menu.onClicked.addListener(async function (info, page) {
             if (link) {
                 act(link);
             }
+            
         }
     }
 });
