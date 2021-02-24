@@ -8,6 +8,6 @@
       "scripts": ["background.js"]
     },
   
-    "permissions": ["contextMenus", "clipboardWrite"]
+    "permissions": ["contextMenus"]
   }
   
