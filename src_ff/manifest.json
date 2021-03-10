@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "OWW Kultura Copy Game Link",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Presents a right-click menu option to generate a link from Occupy White Wall's Kultura site to be pasted in game chat.",
   
     "background": {
